@@ -1,0 +1,28 @@
+.message-container {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    display: flex;
+  
+    &.user-message {
+      background-color: #a5d0ec;
+    }
+  
+    &.ai-message {
+      background-color: #9dcca6;
+    }
+  
+    .message-details {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0.25rem;
+  
+      .message-content {
+        word-break: break-word;
+      }
+  
+      .sender {
+        font-weight: bold;
+      }
+    }
+  }

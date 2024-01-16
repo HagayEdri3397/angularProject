@@ -1,0 +1,6 @@
+<div class="user-input">
+    <mat-form-field>
+        <input matInput [formControl]="userInput" placeholder="Type a message..." (keyup.enter)="sendMessage()">
+        <button matSuffix mat-button (click)="sendMessage()" [disabled]="!(canSendMessage$ | async)"><mat-icon >send</mat-icon></button>
+      </mat-form-field>
+  </div>

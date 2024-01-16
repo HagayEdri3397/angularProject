@@ -1,0 +1,15 @@
+<div
+  class="message-container"
+  [ngClass]="{
+    'user-message': message?.sender === Sender.MySelf,
+    'ai-message': message?.sender === Sender.Bot
+  }"
+>
+  <div class="sender-icon">
+    <mat-icon>{{message?.sender === Sender.MySelf ? "person" : "computer"}}</mat-icon>
+  </div>
+  <div class="message-details">
+    <span class="sender">{{message?.sender === Sender.MySelf ? "You:" : "ChatGPT:"}}</span>
+    <span class="message-content">{{ message?.content }}</span>
+  </div>
+</div>
